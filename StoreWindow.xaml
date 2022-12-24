@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPProject.StoreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="StoreWindow" Height="800" Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Canvas>
+        <Label x:Name="storeLabel" FontFamily ="/WPProject;component/resources/#RixVideoGame 3D" Content="상점"
+               HorizontalAlignment="Left" Margin="361,44,0,0" VerticalAlignment="Top" Height="127" Width="192" FontSize="100" />
+        <Button x:Name="storeToMain" Content="돌아가기" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" 
+                Width="70" Height="70" Click="storeToMain_Click" FontFamily="/WPProject;component/resources/#Maplestory"/>
+        <Button x:Name="digUpgrade" Content="강화하기" HorizontalAlignment="Center" Margin="111,500,361,0" VerticalAlignment="Top"
+                Width="120" Height="70" Click="digUpgrade_Click"  FontFamily="/WPProject;component/resources/#Maplestory" 
+                BorderBrush="{x:Null}" FontSize="30" Background="{x:Null}"/>
+        <Button x:Name="skillUpgrade" Content="강화하기" HorizontalAlignment="Center" Margin="361,500,111,0" VerticalAlignment="Top" 
+                Width="120" Height="70" Click="skillUpgrade_Click" RenderTransformOrigin="0.378,0.494" Grid.ColumnSpan="2" 
+                FontFamily="/WPProject;component/resources/#Maplestory" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="30"/>
+        <Image Margin="96,313,368,328" Source="picture\dig.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image Source="picture\sword.gif" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="135" 
+               Canvas.Left="361" Canvas.Top="315" Width="135"/>
+        <TextBlock x:Name="sDigLevelText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="현재 곡괭이 Lv." VerticalAlignment="Top"
+                   FontSize="20"  Width="254" FontFamily="/WPProject;component/resources/#Maplestory" Height="45" TextAlignment="Center"
+                   Canvas.Left="20" Canvas.Top="450"/>
+        <TextBlock x:Name="sSkillLevelText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="현재 무기 Lv." VerticalAlignment="Top"
+                   FontSize="20" Width="239" FontFamily="/WPProject;component/resources/#Maplestory" Height="45" TextAlignment="Center"
+                   RenderTransformOrigin="0.377,0.5" Canvas.Left="296" Canvas.Top="450"/>
+        <Label x:Name="storePointText" Content="포인트" HorizontalAlignment="Left" Margin="131,633,0,0" VerticalAlignment="Top" 
+               FontSize="40" FontFamily="/WPProject;component/resources/#Maplestory"/>
+        <TextBlock x:Name="warningText" HorizontalAlignment="Left" Margin="56,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"
+                   Height="70" Width="449" FontSize="30" FontWeight="Bold" Foreground="Red" />
+    </Canvas>
+</Window>

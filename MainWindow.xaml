@@ -1,0 +1,42 @@
+﻿<Window x:Class="WPProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:WPProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Canvas>
+        <Image Margin="0,-22,-6.6,9.6" Source="picture\background.png" Stretch="Uniform"/>
+        <Image Source="picture\rock.gif" Canvas.Left="319" Canvas.Top="473" Height="245" Width="245" />
+        <Image x:Name="digAction" Source="picture\digAction.gif" gif:ImageBehavior.AnimatedSource="picture\digAction.gif"
+               gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AutoStart="False" Canvas.Left="146"
+               Canvas.Top="439" Height="279" Width="339" />
+        <Button x:Name="dunBtn" Content="던전" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top"
+                Width="108" Height="70" Click="dunBtn_Click" Background="#00FF0000" BorderBrush="#00FF0000" 
+                FontFamily="/WPProject;component/resources/#RixVideoGame 3D" FontSize="50"/>
+        <Button x:Name="storeBtn" Content="상점" HorizontalAlignment="Left" Margin="453,16,0,0" VerticalAlignment="Top"
+                Width="111" Height="76" Click="storeBtn_Click" FontFamily="/WPProject;component/resources/#RixVideoGame 3D"
+                FontSize="50" Background="#00FF0000" Foreground="Black" BorderBrush="#00FF0000"/>
+        <TextBlock x:Name="pointText" Text="포인트" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"
+                   FontSize="40" RenderTransformOrigin="0.5,-1.894" FontFamily="/WPProject;component/resources/#Maplestory" 
+                   Canvas.Left="48" Canvas.Top="439" />
+        <TextBlock x:Name="characterStatusText" HorizontalAlignment="Left" Margin="40,100,0,0" TextWrapping="Wrap" 
+                   Text="캐릭터 상태" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}"
+                   FontFamily="/WPProject;component/resources/#Maplestory"/>
+        <TextBlock x:Name="digLevelText" HorizontalAlignment="Left" Margin="40,198,0,0" TextWrapping="Wrap" 
+                   Text="현재 곡괭이 Lv." VerticalAlignment="Top" FontSize="20" FontFamily="/WPProject;component/resources/#Maplestory"/>
+        <TextBlock x:Name="skillLevelText" HorizontalAlignment="Left" Margin="40,166,0,0" TextWrapping="Wrap" 
+                   Text="현재 무기 Lv." VerticalAlignment="Top" FontSize="20" FontFamily="/WPProject;component/resources/#Maplestory"/>
+        <TextBlock x:Name="characterLevelText" HorizontalAlignment="Left" Margin="40,134,0,0" TextWrapping="Wrap" 
+                   Text="캐릭터 LV." VerticalAlignment="Top" FontSize="20" Width="300" 
+                   FontFamily="/WPProject;component/resources/#Maplestory"/>
+        <Button x:Name="dig" Content="채광하기" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122"
+                Height="89" Click="dig_Click" FontFamily="/WPProject;component/resources/#Maplestory" Background="#00FF0000"
+                BorderBrush="#00FF0000" FontSize="30" Canvas.Left="284" Canvas.Top="395"/>
+        <MediaElement x:Name="myMediaElement" MediaEnded="myMediaElement_MediaEnded" Volume="10"
+                      IsMuted="False" LoadedBehavior="Manual" Source="sound\mainwindowsound.mp3"/>
+    </Canvas>
+</Window>
